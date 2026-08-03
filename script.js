@@ -11,7 +11,7 @@ function clearDisplay() {
 
 function deleteLast() {
     if (display.textContent > 1) {
-        display.textContent = display.textContent.slice(0, -1);
+        display.textContent.length = display.textContent.slice(0, -1);
     } else {
         clearDisplay();
     }
