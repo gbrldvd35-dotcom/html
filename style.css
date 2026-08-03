@@ -3,7 +3,14 @@
     font-family: sans-serif;
     background: white;
 }
-
+H1 {
+    background: black;
+    color: white;
+    text-align: left;
+    margin: 10px 0 20px 10px;
+    width: 100%;
+    align-self: flex-start;
+}
 body {
     margin: 0;
     height: 100vh;
@@ -14,19 +21,20 @@ body {
 }
 
 .calculator{
-    background: rgb(22, 21, 21);
+    background: rgb(0, 0, 0);
     border-radius: 20px;
     box-shadow: 0 8px 25px;
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    align-items: right;
+    gap: 3rem;
     width: 90%;
     max-width: 320px;
 }
 
 .display {
-    background: rgb(0, 0, 0);
+    background: rgb(14, 13, 13);
     border-radius: 20px;
     padding: 1rem;
     font: bold;
@@ -42,10 +50,30 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 0.7rem;
+    background: black;
 }
 
 button {
-    background: orangered;
+    background: black;
+    border: none;
+    border-radius: 20px;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: xx-large;
+    color: blue;
+    transition: all 0.2s; transform: 0.1s;
+    cursor: pointer;
 }
 
+.equal {
+    grid-column: span 1;
+    border-radius: 30px;   
+    color: blue;
+}    
 
+@media (max-width: 400px) {
+    button{
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+}
